@@ -37,9 +37,31 @@ class LoginPage extends StatelessWidget {
                         'Войти',
                         style: TextStyle(color: Theme.of(context).colorScheme.primary),
                       ),
+                      const SizedBox(height: 20),
                       ElevatedButton(
                         onPressed: () {},
-                        child: const Text('Войти'),
+                        child: const Text(
+                          'Войти',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      ElevatedButton(
+                        onPressed: null,
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.resolveWith<Color>(
+                            (Set<MaterialState> states) {
+                              if (states.contains(MaterialState.disabled)) {
+                                return Theme.of(context).colorScheme.primary.withOpacity(0.5);
+                              }
+                              return Theme.of(context).colorScheme.primary;
+                            },
+                          ),
+                        ),
+                        child: const Text(
+                          'Войти',
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                     ],
                   ),

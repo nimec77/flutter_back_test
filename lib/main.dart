@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_back_test/login_page.dart';
-import 'package:flutter_back_test/test_background.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,12 +13,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: const ColorScheme.light().copyWith(
-          primary: const Color(0xFF9B51E0),
-        )
+        colorScheme: const ColorScheme.light(
+          primary: Color(0xFF9B51E0),
+        ),
+        scaffoldBackgroundColor: const Color(0xFFE8E9ED),
       ),
       home: const LoginPage(),
     );
   }
 }
-
